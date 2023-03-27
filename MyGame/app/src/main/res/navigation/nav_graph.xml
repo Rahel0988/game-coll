@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gameListFragment">
+
+    <fragment
+        android:id="@+id/catHandFragment"
+        android:name="rahel.weldemariyam.mygame.CatHandFragment"
+        android:label="fragment_cat_hand"
+        tools:layout="@layout/fragment_cat_hand" >
+        <action
+            android:id="@+id/action_catHandFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameListFragment"
+        android:name="rahel.weldemariyam.mygame.GameListFragment"
+        android:label="fragment_game_list"
+        tools:layout="@layout/fragment_game_list" >
+        <action
+            android:id="@+id/action_gameListFragment_to_playerNumberFragment"
+            app:destination="@id/playerNumberFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerNumberFragment"
+        android:name="rahel.weldemariyam.mygame.PlayerNumberFragment"
+        android:label="fragment_player_number"
+        tools:layout="@layout/fragment_player_number" >
+        <action
+            android:id="@+id/action_playerNumberFragment_to_playersNameFragment"
+            app:destination="@id/playersNameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playersNameFragment"
+        android:name="rahel.weldemariyam.mygame.PlayersNameFragment"
+        android:label="fragment_players_name"
+        tools:layout="@layout/fragment_players_name" >
+        <action
+            android:id="@+id/action_playersNameFragment_to_timerFragment"
+            app:destination="@id/timerFragment" />
+        <action
+            android:id="@+id/action_playersNameFragment_to_raceFragment"
+            app:destination="@id/raceFragment" />
+        <action
+            android:id="@+id/action_playersNameFragment_to_catHandFragment"
+            app:destination="@id/catHandFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/raceFragment"
+        android:name="rahel.weldemariyam.mygame.RaceFragment"
+        android:label="fragment_race"
+        tools:layout="@layout/fragment_race" >
+        <action
+            android:id="@+id/action_raceFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="rahel.weldemariyam.mygame.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" />
+    <fragment
+        android:id="@+id/timerFragment"
+        android:name="rahel.weldemariyam.mygame.TimerFragment"
+        android:label="fragment_timer"
+        tools:layout="@layout/fragment_timer" >
+        <action
+            android:id="@+id/action_timerFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+    </fragment>
+</navigation>
